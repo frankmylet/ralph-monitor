@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Tool call colors */
+.tool-bash {
+  border-left-color: #10b981;
+}
+.tool-read {
+  border-left-color: #3b82f6;
+}
+.tool-write {
+  border-left-color: #f59e0b;
+}
+.tool-edit {
+  border-left-color: #8b5cf6;
+}
+.tool-grep {
+  border-left-color: #ec4899;
+}
+.tool-glob {
+  border-left-color: #14b8a6;
+}
+.tool-task {
+  border-left-color: #f97316;
+}
+.tool-default {
+  border-left-color: #6b7280;
+}
+
+/* Pulse animation for active items */
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
